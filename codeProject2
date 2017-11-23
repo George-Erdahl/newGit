@@ -1,0 +1,53 @@
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+  int fro = 0;
+  int rof = 0;
+  int first = 0;
+  int second = 1;
+  int total = 0;
+
+    cout<<"\033[1;31m-------------------------------------------------------------------------------\033[0m"<<endl;
+    cout<<"\033[1;31m|  0  |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  | 10  | 11  | 12  |\033[0m"<<endl;
+    cout<<"\033[1;31m+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+\033[0m"<<endl;
+
+    for(int fro = 0; fro < 12; fro += 1)
+    {
+      if (second < 10)
+      {
+        cout<<"\033[1;31m|  \033[0m"<<"\033[1;31m"<<second<<"\033[0m"<<"\033[1;31m  |\033[0m";
+      }
+      else
+      {
+        cout<<"\033[1;31m| \033[0m"<<"\033[1;31m"<<second<<"\033[0m"<<"\033[1;31m  |\033[0m";
+      }
+
+      for (int first = 1; first < 13; first += 1)
+      {
+
+          total = first * second;
+          if (total < 10)
+          {
+            cout<<"  "<<total<<"  |";
+          }
+          else if (total < 100)
+          {
+            cout<<" "<<total<<"  |";
+          }
+          else
+          {
+            cout<<" "<<total<<" |";
+          }
+      }
+      cout<<endl;
+      second += 1;
+    }
+    cout<<"\033[1;31m-------\033[0m"<<"------------------------------------------------------------------------"<<endl;
+  return 0;
+}
