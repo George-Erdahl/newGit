@@ -7,22 +7,21 @@ using namespace std;
 
 int main()
 {
-  int age = 0;
+  double Principal = 0.0;
+  double Rate = 0.0;
+  double Rate2 = 0.0;
+  double Time = 0.0;
+  double Invest = 0.0;
 
-  cout<<"How old are you? ";
-  cin>>age;
-  if(age < 15)
-  {
-    cout<<"You are not old enough to drive"<<endl;
-  }
-  else if(age < 16)
-  {
-    cout<<"You may be old enough to drive"<<endl;
-  }
-  else
-  {
-    cout<<"You are old enough to drive"<<endl;
-  }
+  cout<<"enter the principal: ";
+  cin>>Principal;
+  cout<<"enter the rate of intrest: ";
+  cin>>Rate;
+  cout<<"enter the amount of years: ";
+  cin>>Time;
+  Rate2 = Rate / 100;
+  Invest = Principal * (1 + Rate2 * Time);
+  cout<<"After "<<Time<<" years at "<<Rate<<"%, the investment will be worth $"<<Invest<<endl;
 
   return 0;
 }
