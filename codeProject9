@@ -1,0 +1,27 @@
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+  double Principal = 0.0;
+  double Rate = 0.0;
+  double Rate2 = 0.0;
+  double Time = 0.0;
+  double total = 0.0;
+
+  cout<<"enter the principal: ";
+  cin>>Principal;
+  cout<<"enter the rate of interest: ";
+  cin>>Rate;
+  cout<<"enter the number of years: ";
+  cin>>Time;
+  Rate2 = Rate / 100;
+  total = Principal * (1 + Rate2 * Time);
+  cout<<"after "<<Time<<" years at "<<Rate<<"%, the investment will be worth $"<<total<<endl;
+
+  return 0;
+}
