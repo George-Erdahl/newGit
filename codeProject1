@@ -9,10 +9,11 @@ int main()
 {
 	//variables
 	int mode = 0;
-	double num1 = 0;
-	double num2 = 0;
-	double num3 = 0;
+	double num1 = 0.0;
+	double num2 = 0.0;
+	double num3 = 0.0;
 
+	//
 	cout<<"please enter the mode you would like to use."<<endl;
 	cout<<"adding(1)"<<endl;
 	cout<<"substracting(2)"<<endl;
@@ -23,6 +24,7 @@ int main()
 	switch(mode)
 	{
 		case 1:
+		//add
 		cout<<"please enter in your first number"<<endl;
 		cin>>num1;
 		cout<<"please enter in the second number"<<endl;
@@ -30,28 +32,33 @@ int main()
 		num3 = num1 + num2;
 		break;
 		case 2:
+		//subtract
 		cout<<"please enter in your first number"<<endl;
 		cin>>num1;
 		cout<<"please enter in the second number"<<endl;
 		cin>>num2;
+		num3 = num1 - num2;
 		break;
 		case 3:
+		//multiply
 		cout<<"please enter in your first number"<<endl;
 		cin>>num1;
 		cout<<"please enter in the second number"<<endl;
 		cin>>num2;
+		num3 = num1 * num2;
 		break;
 		case 4:
+		//divide
 		cout<<"please enter in your first number"<<endl;
 		cin>>num1;
 		cout<<"please enter in the second number"<<endl;
 		cin>>num2;
+		num3 = num1 / num2;
 		break;
 		default:
-		cout<<"end"<<endl;
+		cout<<"END"<<endl;
 		break;
 	}
-	cout<<"this is your answer: ";
-	cout<<num3<<endl;
+	cout<<"this is your answer: "<<num3<<endl;
 	return 0;
 }
