@@ -1,0 +1,42 @@
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <iomanip>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+  double Principal = 0.0;
+  double Rate = 0.0;
+  double Rate2 = 0.0;
+  double Time = 0.0;
+  double total = 0.0;
+  double comp = 0.0;
+  double equ1 = 0.0;
+  double temp = 0.0;
+  double equ2 = 0.0;
+
+  cout<<"what is the principal amount? ";
+  cin>>Principal;
+  cout<<"what is the rate? ";
+  cin>>Rate;
+  cout<<"what is the number of years? ";
+  cin>>Time;
+  cout<<"what is the number of times the intrest is compounded per year? ";
+  cin>>comp;
+  Rate2 = Rate / 100;
+  equ1 = 1 + (Rate2 / comp);
+  equ2 = Time * comp;
+  temp = equ1;
+  while (equ2 > 1)
+  {
+    equ2 -= 1;
+    temp *= equ1;
+  }
+  total = temp * Principal;
+  cout<<"$"<<Principal<<" invested at "<<Rate<<"% for "<<Time<<" years compounded "<<comp<<" times per year is $"<<total<<endl;
+
+  return 0;
+}
