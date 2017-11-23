@@ -1,0 +1,50 @@
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+  double price1 = 0.0;
+  int quantity1 = 0;
+  double amount1 = 0.0;
+  double price2 = 0.0;
+  int quantity2 = 0;
+  double amount2 = 0.0;
+  double price3 = 0.0;
+  int quantity3 = 0;
+  double amount3 = 0.0;
+  double subTotal = 0.0;
+  double tax = 0.055;
+  double amountTax = 0.0;
+  double total = 0.0;
+
+  cout<<"enter the price of item 1: ";
+  cin>>price1;
+  cout<<"enter the quantity of item 1: ";
+  cin>>quantity1;
+  cout<<"enter the price of item 2: ";
+  cin>>price2;
+  cout<<"enter the quantity of item 2: ";
+  cin>>quantity2;
+  cout<<"enter the price of item 3: ";
+  cin>>price3;
+  cout<<"enter the quantity of item 3: ";
+  cin>>quantity3;
+
+  amount1 = price1 * quantity1;
+  amount2 = price2 * quantity2;
+  amount3 = price3 * quantity3;
+  subTotal = amount1 + amount2 + amount3;
+  amountTax = tax * subTotal;
+  total = subTotal + amountTax;
+
+  cout<< fixed <<setprecision(2);
+  cout<<"Subtotal: $"<<subTotal<<endl;
+  cout<<"Tax: $"<<amountTax<<endl;
+  cout<<"Total: $"<<total<<endl;
+
+  return 0;
+}
