@@ -1,0 +1,59 @@
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+  double BAC = 0.0;
+  double Alcohol = 0.0;
+  double Weight = 0.0;
+  string Sex = "";
+  double Ratio = 0.0;
+  double Time = 0.0;
+
+
+  cout<<"How much alcohol have you consumed? (Oz) ";
+  cin>>Alcohol;
+  cout<<"What is your weight? ";
+  cin>>Weight;
+  cout<<"Are you Male or Female? ";
+  cin>>Sex;
+  if (Sex == "Male")
+  {
+    Ratio = .73;
+  }
+  else if (Sex == "male")
+  {
+    Ratio = .73;
+  }
+  else if (Sex == "Female")
+  {
+    Ratio = .66;
+  }
+  else if (Sex == "female")
+  {
+    Ratio = .66;
+  }
+  else
+  {
+    cout<<"you did it wrong"<<endl;
+  }
+  cout<<"How many hours since your last drink? ";
+  cin>>Time;
+  BAC = (Alcohol * 5.14 / Weight * Ratio) - .015 * Time;
+  cout<<"Your Blood Alcohol Level is "<<BAC<<endl;
+  if (BAC <= 0.08)
+  {
+    cout<<"you can drive"<<endl;
+  }
+  else
+  {
+    cout<<"NO DRIVING"<<endl;
+  }
+
+
+  return 0;
+}
