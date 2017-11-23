@@ -1,0 +1,25 @@
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+  double amountTo = 0.0;
+  double amountFrom = 0.0;
+  double rateTo = 100.0;
+  double rateFrom = 0.0;
+
+  cout<<fixed<<setprecision(2);
+  cout<<"how many euros are you exchanging? ";
+  cin>>amountFrom;
+  cout<<"what is the exchange rate? ";
+  cin>>rateFrom;
+  cout<<amountFrom<<" euros at an exchange rate of "<<rateFrom<<" is"<<endl;
+  amountTo = amountFrom * rateFrom / rateTo;
+  cout<< amountTo <<" U.S. dollars"<<endl;
+
+  return 0;
+}
