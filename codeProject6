@@ -1,0 +1,24 @@
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+  double paint = 0;
+  int wall = 0;
+  int fro = 0;
+  int fi = 0;
+
+  cout<<"how much wall space do you need to cover? ";
+  cin>>wall;
+  wall -= 1;
+  paint = wall / 180;
+  paint += 1;
+  cout<<fixed<<setprecision(0);
+  cout<<"you will need "<<paint<<" gallons of paint"<<endl;
+
+  return 0;
+}
