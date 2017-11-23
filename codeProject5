@@ -1,0 +1,58 @@
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+  int People = 0;
+  int Pizza = 0;
+  int Allowence = 0;
+  int Left = 0;
+
+  cout<<"how many people? ";
+  cin>>People;
+  cout<<"how many slices of pizza? ";
+  cin>>Pizza;
+  cout<<"how many slices of pizza does each person get? ";
+  cin>>Allowence;
+  cout<<"that is "<<People<<" people with "<<Pizza<<" slices of pizza"<<endl;
+  cout<<"each person gets "<<Allowence<<" slices of pizza"<<endl;
+  Allowence = Pizza - People;
+  if (Allowence > 0)
+  {
+    cout<<"there are "<<Allowence<<" slices of pizza left"<<endl;
+  }
+  else
+  {
+    cout<<"theres no more pizza you need "<<Allowence<<" more slices"<<endl;
+  }
+  return 0;
+}
+
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+  double paint = 0;
+  int wall = 0;
+  int fro = 0;
+  int fi = 0;
+
+  cout<<"how much wall space do you need to cover? ";
+  cin>>wall;
+  wall -= 1;
+  paint = wall / 180;
+  paint += 1;
+  cout<<fixed<<setprecision(0);
+  cout<<"you will need "<<paint<<" gallons of paint"<<endl;
+
+  return 0;
+}
