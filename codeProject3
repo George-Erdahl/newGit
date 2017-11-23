@@ -1,0 +1,62 @@
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+  int num1 = 0;
+  int num2 = 0;
+  int num3 = 0;
+  int year = 2017;
+  int yearF = 0;
+
+  cout<<"How old are you? ";
+  cin>>num1;
+  cout<<"What age would you like to be to retire? ";
+  cin>>num2;
+  num3 = num2 - num1;
+  if (num3 < 1)
+  {
+    num3 = num2 - num1;
+      cout<<"you have "<<num3<<" years left until you can retire"<<endl;
+  }
+  else if (num3 > 0)
+  {
+    cout<<"You have "<<num3<<" year left until you can retire"<<endl;
+  }
+  else
+  {
+    cout<<"You can already retire"<<endl;
+  }
+  yearF = year + num3;
+  cout<<"This year is "<<year<<" so you can retire in "<<yearF<<endl;
+  return 0;
+}
+
+#include <iostream>
+#include <string>
+#include <fstream>
+
+using namespace std;
+
+int main()
+{
+  double length = 0.0;
+  double width = 0.0;
+  double area = 0.0;
+  double MTarea = 0.0;
+
+  cout<<"length? ";
+  cin>>length;
+  cout<<"width? ";
+  cin>>width;
+  cout<<"you entered the dimensions of "<<length<<" and "<<width<<endl;
+  area = length * width;
+  MTarea = area * 0.09290304;
+  cout<<"your area is "<<endl<<area<<" square feet"<<endl<<MTarea<<" square meters"<<endl;
+
+  return 0;
+}
