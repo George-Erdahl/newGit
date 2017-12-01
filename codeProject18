@@ -1,0 +1,48 @@
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+  double Celsius = 0.0;
+  double Farenheit = 0.0;
+  string Choice = "";
+
+  cout<<"Press C to convert Farenheit to Celsius."<<endl<<"Press F to convet Celsius to Farenheit."<<endl;
+  cout<<"you choose: ";
+  cin>>Choice;
+  if (Choice == "F")
+  {
+    cout<<"Please enter your Celsius temp: ";
+    cin>>Celsius;
+  }
+  else if (Choice == "C")
+  {
+    cout<<"Please enter your Farenheit temp: ";
+    cin>>Farenheit;
+  }
+  else
+  {
+    cout<<"no"<<endl;
+  }
+
+  Celsius = (Farenheit - 32) * 5 / 9;
+  Farenheit = (Celsius * 9 / 5) + 32;
+
+  if (Choice == "F")
+  {
+    cout<<"Your temp in Farenheit: "<<Farenheit<<endl;
+  }
+  else if (Choice == "C")
+  {
+    cout<<"Your temp in Celsius: "<<Celsius<<endl;
+  }
+  else
+  {
+    cout<<"no"<<endl;
+  }
+  return 0;
+}
