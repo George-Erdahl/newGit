@@ -1,0 +1,70 @@
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+  int number = 0.0;
+  string month = "";
+
+  cout<<"Please enter the number of the month"<<endl;
+  cin>>number;
+  switch (number)
+  {
+    case 1:
+      month = "January";
+      cout<<"The name of the month is "<<month<<endl;
+    break;
+    case 2:
+      month = "February";
+      cout<<"The name of the month is "<<month<<endl;
+    break;
+    case 3:
+      month = "March";
+      cout<<"The name of the month is "<<month<<endl;
+    break;
+    case 4:
+      month = "April";
+      cout<<"The name of the month is "<<month<<endl;
+    break;
+    case 5:
+      month = "May";
+      cout<<"The name of the month is "<<month<<endl;
+    break;
+    case 6:
+      month = "June";
+      cout<<"The name of the month is "<<month<<endl;
+    break;
+    case 7:
+      month = "July";
+      cout<<"The name of the month is "<<month<<endl;
+    break;
+    case 8:
+      month = "August";
+      cout<<"The name of the month is "<<month<<endl;
+    break;
+    case 9:
+      month = "September";
+      cout<<"The name of the month is "<<month<<endl;
+    break;
+    case 10:
+      month = "october";
+      cout<<"The name of the month is "<<month<<endl;
+    break;
+    case 11:
+      month = "Novermber";
+      cout<<"The name of the month is "<<month<<endl;
+    break;
+    case 12:
+      month = "December";
+      cout<<"The name of the month is "<<month<<endl;
+    break;
+    default:
+      cout<<""<<endl;
+    break;
+  }
+  return 0;
+}
