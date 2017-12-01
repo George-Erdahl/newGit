@@ -1,3 +1,4 @@
+#include <iostream>
 #include <string>
 #include <fstream>
 #include <iomanip>
@@ -6,53 +7,35 @@ using namespace std;
 
 int main()
 {
-  double BAC = 0.0;
-  double Alcohol = 0.0;
-  double Weight = 0.0;
-  string Sex = "";
-  double Ratio = 0.0;
-  double Time = 0.0;
+  double Principal = 0.0;
+  double Rate = 0.0;
+  double Rate1 = 0.0;
+  int Time = 0;
+  int Amount = 0;
+  double Total = 1.0;
+  double Par1 = 0.0;
+  double par1 = 0.0;
+  double Par2 = 0.0;
+  int fro = 0;
 
-
-  cout<<"How much alcohol have you consumed? (Oz) ";
-  cin>>Alcohol;
-  cout<<"What is your weight? ";
-  cin>>Weight;
-  cout<<"Are you Male or Female? ";
-  cin>>Sex;
-  if (Sex == "Male")
-  {
-    Ratio = .73;
-  }
-  else if (Sex == "male")
-  {
-    Ratio = .73;
-  }
-  else if (Sex == "Female")
-  {
-    Ratio = .66;
-  }
-  else if (Sex == "female")
-  {
-    Ratio = .66;
-  }
-  else
-  {
-    cout<<"you did it wrong"<<endl;
-  }
-  cout<<"How many hours since your last drink? ";
+  cout<<"What is the Principal amount? ";
+  cin>>Principal;
+  cout<<"What is the rate? ";
+  cin>>Rate;
+  cout<<"What is the number of years? ";
   cin>>Time;
-  BAC = (Alcohol * 5.14 / Weight * Ratio) - .015 * Time;
-  cout<<"Your Blood Alcohol Level is "<<BAC<<endl;
-  if (BAC <= 0.08)
+  cout<<"What is the number of time the intrest is compunded per year? ";
+  cin>>Amount;
+  Rate1 = Rate / 100;
+  Par1 = 1 + Rate1 / Amount;
+  par1 = 1 + Rate1 / Amount;
+  Par2 = Time * Amount;
+  for (int fro = 1; fro < Par2 ; fro += 1)
   {
-    cout<<"you can drive"<<endl;
+     par1 *= Par1;
   }
-  else
-  {
-    cout<<"NO DRIVING"<<endl;
-  }
-
+  Total = Principal * par1;
+  cout<<"$"<<Principal<<" invested at "<<Rate<<"% for "<<Time<<" years compounded "<<Amount<<" times per year is "<<Total<<endl;
 
   return 0;
 }
