@@ -1,0 +1,49 @@
+#include <iostream>
+#include <string>
+#include <fstream>
+
+using namespace std;
+
+int main()
+{
+	string first = "";
+	string First1 = "";
+	string second = "";
+	int length = 5;
+
+
+	for (int length = 0; 50 > length; length += 1)
+	{
+		cout<<"What is the next unit of 50?"<<endl;
+		getline(cin, first);
+
+		if (first == "C")
+		{
+			First1.insert(length,"C");
+			second.insert(length,"G");
+		}
+		else if (first == "G")
+		{
+			First1.insert(length,"G");
+			second.insert(length,"C");
+		}
+		else if (first == "T")
+		{
+			First1.insert(length,"T");
+			second.insert(length,"A");
+		}
+		else if (first == "A")
+		{
+			First1.insert(length,"A");
+			second.insert(length,"T");
+		}
+		else
+		{
+			cout<<"That is a no"<<endl;
+		}
+	}
+	cout<<"First DNA string:"<<endl<<First1<<endl;
+	cout<<"second DNA string:"<<endl<<second<<endl;
+
+    return 0;
+}
