@@ -1,0 +1,38 @@
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+  double BMI = 0.0;
+  double Weight = 0.0;
+  double Height = 0.0;
+
+  cout<<"What is you Weight: ";
+  cin>>Weight;
+  cout<<"What is you Height: ";
+  cin>>Height;
+
+  BMI = (Weight / (Height * Height)) * 703;
+
+  if (BMI >= 18.5 && BMI <= 25)
+  {
+    cout<<"Your BMI is: "<<BMI<<endl;
+    cout<<"You are great"<<endl;
+  }
+  else if (BMI <= 18.5)
+  {
+    cout<<"Your BMI is: "<<BMI<<endl;
+    cout<<"You are underweight"<<endl;
+  }
+  else
+  {
+    cout<<"Your BMI is: "<<BMI<<endl;
+    cout<<"You are overweight"<<endl;
+  }
+
+  return 0;
+}
